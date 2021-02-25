@@ -14,46 +14,42 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
-@Listeners(ITestListnerForSignup.class)
+
 public class SignupTest {
 
     WebDriver driver;
     HomePageObjects pom;
     Logger log;
 
-    @BeforeSuite
-    public void InitialiseBrowser() throws IOException {
-        driver = Base.initialiseDriver();
-
-
-    }
-
     @BeforeTest
-    public void InitialisePageObjects() {
-        pom = new HomePageObjects(driver);
-
-
-    }
-
-    @BeforeClass
-    public void logsSetup() {
+    public void setUp() throws IOException {
         log = LogManager.getLogger(SignupTest.class.getName());
         DOMConfigurator.configure("log4J.xml");
+        log.info("**********Log4j.xml File has been Configured********");
+
+
+        driver = Base.initialiseDriver();
+        log.info("WebDriver has  Initiliased");
+        log.info("WebBrowser has Invoked");
+
+
+        pom = new HomePageObjects(driver);
+        log.info("Initialising the Home Page WebElements");
+
         ITestListnerForSignup.getLog(log);
+        log.info("********ITestListener Starts Logging*********");
 
     }
-
-
 
     @Test(priority = 1)
     public void baseURLNavigation() {
 
-            String QaURL = Base.getBaseURL();
-            driver.get(QaURL);
-            boolean b = driver.getCurrentUrl().equals(QaURL);
+        String QaURL = Base.getBaseURL();
+        driver.get(QaURL);
+        boolean b = driver.getCurrentUrl().equals(QaURL);
 
-            log.assertLog(b, "Current URL is not equal to the Base URL");
-            Assert.assertTrue(b);
+        log.assertLog(b, "Current URL is not equal to the Base URL");
+        Assert.assertTrue(b);
 
     }
 
@@ -156,10 +152,10 @@ public class SignupTest {
     @Test(priority = 13)
     public void clickCheckBox() {
 
-            boolean b = pom.getCheckbox().isEnabled();
-            log.assertLog(b, "Check Box is not Enabled");
-            pom.getCheckbox().click();
-            Assert.assertTrue(pom.getCheckbox().isSelected());
+        boolean b = pom.getCheckbox().isEnabled();
+        log.assertLog(b, "Check Box is not Enabled");
+        pom.getCheckbox().click();
+        Assert.assertTrue(pom.getCheckbox().isSelected());
 
     }
 
@@ -175,7 +171,7 @@ public class SignupTest {
 
     }
 
-    //@AfterTest
+    @AfterTest
     public void teardown() {
         driver.quit();
 

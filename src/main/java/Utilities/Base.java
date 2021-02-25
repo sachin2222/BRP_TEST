@@ -1,11 +1,15 @@
 package Utilities;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.io.FileHandler;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -58,8 +62,17 @@ public class Base {
 
 
     }
-    public static Properties getSystemProperty(){
+
+    public static Properties getSystemProperty() {
         return prop;
+
+    }
+
+    public static void takeScreenShot(String testcasename,WebDriver driver) throws IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String dest=System.getProperty("user.dir") + "\\Screenshots\\"+testcasename+".png";
+        FileHandler.copy(source,new File(dest));
 
     }
 
