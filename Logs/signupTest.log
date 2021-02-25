@@ -1,0 +1,30 @@
+2021-02-25 11:56:54 INFO  SignupTest onTestStart :18 - baseURLNavigation:STARTED
+2021-02-25 11:57:20 INFO  SignupTest onTestSuccess :25 - baseURLNavigation: PASSED
+2021-02-25 11:57:20 INFO  SignupTest onTestStart :18 - selectTitle:STARTED
+2021-02-25 11:57:21 ERROR SignupTest onTestFailure :32 - selectTitle: FAILED
+2021-02-25 11:57:21 ERROR SignupTest onTestFailure :33 -  Priority of selectTitle  Method is 2
+2021-02-25 11:57:21 ERROR SignupTest onTestFailure :36 - / by zero
+2021-02-25 11:57:21 INFO  SignupTest onTestStart :18 - EnterFirstName:STARTED
+2021-02-25 11:57:21 INFO  SignupTest onTestSuccess :25 - EnterFirstName: PASSED
+2021-02-25 11:57:21 INFO  SignupTest onTestStart :18 - EnterLastName:STARTED
+2021-02-25 11:57:21 INFO  SignupTest onTestSuccess :25 - EnterLastName: PASSED
+2021-02-25 11:57:21 INFO  SignupTest onTestStart :18 - ValidPhoneNumberTest:STARTED
+2021-02-25 11:57:21 INFO  SignupTest onTestSuccess :25 - ValidPhoneNumberTest: PASSED
+2021-02-25 11:57:21 INFO  SignupTest onTestStart :18 - EnterPassword:STARTED
+2021-02-25 11:57:21 INFO  SignupTest onTestSuccess :25 - EnterPassword: PASSED
+2021-02-25 11:57:21 INFO  SignupTest onTestStart :18 - EnterConfirmPassword:STARTED
+2021-02-25 11:57:21 INFO  SignupTest onTestSuccess :25 - EnterConfirmPassword: PASSED
+2021-02-25 11:57:21 INFO  SignupTest onTestStart :18 - clickCalender:STARTED
+2021-02-25 11:57:22 INFO  SignupTest onTestSuccess :25 - clickCalender: PASSED
+2021-02-25 11:57:22 INFO  SignupTest onTestStart :18 - selectYear:STARTED
+2021-02-25 11:57:22 INFO  SignupTest onTestSuccess :25 - selectYear: PASSED
+2021-02-25 11:57:22 INFO  SignupTest onTestStart :18 - selectMonth:STARTED
+2021-02-25 11:57:23 INFO  SignupTest onTestSuccess :25 - selectMonth: PASSED
+2021-02-25 11:57:23 INFO  SignupTest onTestStart :18 - selectDate:STARTED
+2021-02-25 11:57:25 INFO  SignupTest onTestSuccess :25 - selectDate: PASSED
+2021-02-25 11:57:25 INFO  SignupTest onTestStart :18 - enterEmail:STARTED
+2021-02-25 11:57:25 INFO  SignupTest onTestSuccess :25 - enterEmail: PASSED
+2021-02-25 11:57:25 INFO  SignupTest onTestStart :18 - clickCheckBox:STARTED
+2021-02-25 11:57:25 INFO  SignupTest onTestSuccess :25 - clickCheckBox: PASSED
+2021-02-25 11:57:25 INFO  SignupTest onTestStart :18 - refreshPage:STARTED
+2021-02-25 11:57:25 INFO  SignupTest onTestSuccess :25 - refreshPage: PASSED
