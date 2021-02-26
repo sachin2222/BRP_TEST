@@ -29,12 +29,12 @@ public class SignupTest {
 
 
         driver = Base.initialiseDriver();
-        log.info("WebDriver has  Initiliased");
+        log.info("WebDriver has  Initialised");
         log.info("WebBrowser has Invoked");
 
 
         pom = new HomePageObjects(driver);
-        log.info("Initialising the Home Page WebElements");
+        log.info("Initialising the Page WebElements");
 
         ITestListnerForSignup.getLog(log);
         log.info("********ITestListener Starts Logging*********");
@@ -61,7 +61,7 @@ public class SignupTest {
         select.selectByVisibleText(title);
         boolean b = title.equals(select.getFirstSelectedOption().getText());
         log.assertLog(b, "Test Case Failed because title is Not selected");
-        Assert.assertTrue(b);
+        Assert.assertTrue(false);
 
     }
 

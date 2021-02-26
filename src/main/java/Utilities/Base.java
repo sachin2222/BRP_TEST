@@ -68,11 +68,12 @@ public class Base {
 
     }
 
-    public static void takeScreenShot(String testcasename,WebDriver driver) throws IOException {
+    public static String takeScreenShot(String testcasename, WebDriver driver) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
-        String dest=System.getProperty("user.dir") + "\\Screenshots\\"+testcasename+".png";
-        FileHandler.copy(source,new File(dest));
+        String dest = System.getProperty("user.dir") + "\\Screenshots\\" + testcasename + ".png";
+        FileHandler.copy(source, new File(dest));
+        return dest;
 
     }
 
